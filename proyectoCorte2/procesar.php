@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    
 <?php	
 require_once 'Fraccion.php';
 
@@ -55,7 +45,7 @@ $entero2 = isset($_POST['entero2']) && is_numeric($_POST['entero2']) ? (int) $_P
 
     // Mostrar el resultado
     echo "<h2>Resultado:</h2>";    
-    echo "<div class='resultado'><p>Resultado: " . $resultado->toString() . "</p></div>";
+    echo "<p>Resultado: " . $resultado . "</p>";
 
 
 ?>
