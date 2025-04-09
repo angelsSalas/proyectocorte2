@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    color: #333;
+}
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* Estilo para la sección de resultados */
+.resultado {
+    background-color: #f2f2f2; /* Fondo gris claro */
+    border: 2px solid #4CAF50; /* Borde verde */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 1.5em;
+    color: #333; /* Color del texto */
+}
+
+.resultado p {
+    margin: 0;
+    font-weight: bold; /* Hacer el texto en negrita */
+    color: #4CAF50; /* Color del texto verde */
+}
+
