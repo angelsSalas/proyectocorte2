@@ -36,8 +36,27 @@ class Fraccion {
     }
 
     // Método para convertir la fracción a formato string (numerador/denominador)
-    public function toString() {
-        return $this->numerador . '/' . $this->denominador;
+    public function __toString() {
+
+        // Si el denominador es 1, es un número entero
+        if ($this->denominador == 1) {
+            return (string)$this->numerador;
+        }
+    
+        // Si el numerador es menor que el denominador, es una fracción propia
+        if (abs($this->numerador) < $this->denominador) {
+            return "{$this->numerador}/{$this->denominador}";
+        }
+    
+        // Caso de fracción impropia: descomponemos en parte entera y fracción
+        $parteEntera = intdiv($this->numerador, $this->denominador);
+        $resto = abs($this->numerador % $this->denominador);
+    
+        if ($resto == 0) {
+            return (string)$parteEntera; // Es un número entero exacto
+        }
+    
+        return "{$parteEntera} {$resto}/{$this->denominador}";
     }
 
     // Método para simplificar la fracción utilizando el máximo común divisor (MCD)
@@ -79,6 +98,7 @@ class Fraccion {
         return $resultado;  // Devuelve el resultado simplificado
     }
 
+
     // Método para dividir dos fracciones
     public function dividir(Fraccion $segundaFraccion) {
         if ($segundaFraccion->getNumerador() == 0) {
@@ -99,3 +119,4 @@ class Fraccion {
     }
 }
 ?>
+
